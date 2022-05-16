@@ -16,5 +16,5 @@ Feature: SLI POP UP test_with outer click
   Then Enter "Management" data in Search fields
   Then Press the outerside the popup
   Then verify the Popupi
-  Then Open Sli listing pages and verify the popup 
+  Then Open Sli listing pages and verify the popupi 
   Then Click on the sign out button and verify the page

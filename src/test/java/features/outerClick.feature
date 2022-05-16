@@ -14,7 +14,7 @@ Feature: SLI POP UP test_with outer click
   Then Click on Signin button  
   And Enter free valid username "qaslidegeeks@gmail.com" and password "Qwerty@1"
   Then Enter "Management" data in Search fields
-  Then Press the outerside the pop-up
+  Then Press the outerside the popup
   Then verify the Popupi
   Then Open Sli listing pages and verify the popup 
   Then Click on the sign out button and verify the page

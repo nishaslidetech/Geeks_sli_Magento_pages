@@ -12,7 +12,8 @@ import cucumber.api.junit.Cucumber;
 //@RunWith(Cucumber.class)
 @RunWith(Cucumber.class)
 @CucumberOptions(features = { "." }, glue = { "stepDefination" }, // tags= {"@Free_Magento_pages_test"},
-		plugin = { "pretty", "html:target/cucumber-pretty"})
+		plugin = { "pretty", "html:target/site/cucumber-pretty", "json:target/cucumber/cucumber.json",
+				"usage:target/usage.jsonx", "junit:target/cucumber.xml" })
 
 public class TestRunner {
 

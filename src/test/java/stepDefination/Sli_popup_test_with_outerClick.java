@@ -39,8 +39,8 @@ public class Sli_popup_test_with_outerClick extends BaseClass {
 		}
 	}
 
-	@Then("^press the escape key$")
-	public void press_the_escape_key() throws Throwable {
+	@Then("^press the outer click$")
+	public void press_the_outer_click() throws Throwable {
 		try {
 			Thread.sleep(2000);
 			pop_up_Value = BaseClass.precenceOfElement(By.xpath("//ul[@id='sli_autocomplete']")).getCssValue("display");
@@ -171,8 +171,8 @@ public class Sli_popup_test_with_outerClick extends BaseClass {
 		}
 	}
 
-	@Then("^Press the Escape key$")
-	public void press_the_Escape_key() throws Throwable {
+	@Then("^Press the Escape keyPress the outerside the pop-up$")
+	public void Press_the_outerside_the_pop_up() throws Throwable {
 		try {
 			Thread.sleep(3000);
 			pop_up_Value = BaseClass.precenceOfElement(By.xpath("//ul[@id='sli_autocomplete']")).getCssValue("display");

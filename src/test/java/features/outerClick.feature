@@ -12,7 +12,7 @@ Feature: SLI POP UP test_with outer click
   @withlogintest
   Scenario: SLI popup test with outer click with login
   Then Click on Signin button  
-  And Enter free valid username "nishadhiman0027@gmail.com" and password "Qwerty@1"
+  And Enter free valid username "qaslidegeeks@gmail.com" and password "Qwerty@1"
   Then Enter "Management" data in Search fields
   Then Press the outerside the pop-up
   Then verify the Popupi

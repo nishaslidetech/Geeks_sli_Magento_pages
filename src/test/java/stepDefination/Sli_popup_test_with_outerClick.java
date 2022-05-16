@@ -209,7 +209,7 @@ public class Sli_popup_test_with_outerClick extends BaseClass {
 	}
 
 	@Then("^Open Sli listing pages and verify the pop-up$")
-	public void open_Sli_listing_pages_and_verify_the_pop_up() throws Throwable {
+	public void Open_Sli_listing_pages_and_verify_the_pop_up() throws Throwable {
 		try {
 			search_field = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@id='search-input']")));
 			search_field.clear();

@@ -83,7 +83,7 @@ public class Sli_popup_test_with_outerClick extends BaseClass {
 			// click on "hr report" in left navigation bar
 
 			WebElement hr_Report = wait
-					.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@data-suggested-term='hr report']")));
+					.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@Class='sli_ac_suggestions']//ul//li[5]")));
 			hr_Report.click();
 			Thread.sleep(3000);
 
@@ -129,7 +129,7 @@ public class Sli_popup_test_with_outerClick extends BaseClass {
 			search_field = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@id='search-input']")));
 			search_field.clear();
 			Thread.sleep(2000);
-				WebElement login = wait.until(ExpectedConditions.elementToBeClickable(By.linkText("LOGIN")));
+			WebElement login = wait.until(ExpectedConditions.elementToBeClickable(By.linkText("LOGIN")));
 			Thread.sleep(3000);
 			js.executeScript("arguments[0].click();", login);
 			Thread.sleep(2000);
@@ -218,9 +218,9 @@ public class Sli_popup_test_with_outerClick extends BaseClass {
 
 			// click on "hr report" in left navigation bar
 
-			WebElement change_Management_training_plans = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(
-					"//a[@data-suggested-term='change management training plan']//span[@class='highlight'][normalize-space()='management']")));
-			change_Management_training_plans.click();
+			WebElement change_Management_Decks = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(
+					"//div[@Class='sli_ac_suggestions']//ul//li[6]")));
+			change_Management_Decks.click();
 			System.out.println();
 
 			// Clear the search field and enter "Management" on sli listing page

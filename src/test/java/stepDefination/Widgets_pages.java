@@ -41,7 +41,7 @@ public class Widgets_pages extends BaseClass {
 			Thread.sleep(4000);
 			String verify_ppt_page = wait
 					.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@id='download_product']"))).getText();
-			Assert.assertTrue("user is not on corect page", verify_ppt_page.contains("Download this presentation"));
+			Assert.assertTrue("user is not on corect page", verify_ppt_page.contains("Download this Presentation"));
 		} catch (NoSuchElementException e) {
 
 		}

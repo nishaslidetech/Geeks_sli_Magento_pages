@@ -171,8 +171,8 @@ public class Sli_popup_test_with_outerClick extends BaseClass {
 		}
 	}
 
-	@Then("^Press the Escape keyPress the outerside the pop-up$")
-	public void Press_the_outerside_the_pop_up() throws Throwable {
+	@Then("^Press the Escape keyPress the outerside the popup$")
+	public void Press_the_outerside_the_popup() throws Throwable {
 		try {
 			Thread.sleep(3000);
 			pop_up_Value = BaseClass.precenceOfElement(By.xpath("//ul[@id='sli_autocomplete']")).getCssValue("display");

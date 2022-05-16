@@ -1,5 +1,5 @@
 @Sli_pagination_test
-Feature: SLI POP UP test
+Feature: SLI listing page
 
 
 

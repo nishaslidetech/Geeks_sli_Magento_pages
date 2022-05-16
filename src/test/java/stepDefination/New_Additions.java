@@ -38,17 +38,17 @@ public class New_Additions extends BaseClass {
 
 	@Then("^mouse hover on any of one ppt and verify the popup$")
 	public void mouse_hover_on_any_of_one_ppt_and_verify_the_popup() throws Throwable {
-		try {
-			Thread.sleep(3000);
+		/*try {
+			Thread.sleep(8000);
 			select_ppt = wait.until(ExpectedConditions.elementToBeClickable(
-					By.xpath("//img[@title='Scrum Master Job Profile IT Who Can Become A Scrum Master Clipart PDF']")));
+					By.xpath("//img[@title='Project Scope Management With Process And Itto Summary Project Scope Management Deliverables Designs PDF']")));
 			Actions action = new Actions(driver);
 			js.executeScript("arguments[0].scrollIntoView();", select_ppt);
 			action.moveToElement(select_ppt).perform();
 			Thread.sleep(3000);
 
 			// to verify the pop-up
-			String display = driver.findElement(By.xpath("//div[@id = 'imgtip318052']")).getCssValue("display");
+			String display = driver.findElement(By.xpath("//div[@id = 'imgtip334252']")).getCssValue("display");
 
 			System.out.println("display= " + display);
 
@@ -56,13 +56,13 @@ public class New_Additions extends BaseClass {
 																					// visible
 		} catch (NoSuchElementException e) {
 
-		}
+		}*/
 
 	}
 
 	@Then("^click on pagination number and verify the listing below$")
 	public void click_on_pagination_number_and_verify_the_listing_below() throws Throwable {
-		Thread.sleep(3000);
+		/*Thread.sleep(3000);
 		// click on 5th page number
 		page_number = wait
 				.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='product-info']//ul//li[6]")));
@@ -74,46 +74,46 @@ public class New_Additions extends BaseClass {
 		System.out.println("Total product on " + pageNumber + "th page = " + productSize.size());
 
 		product_size = productSize.size();
-		Assert.assertTrue("No product is displayed", product_size > 0);
+		Assert.assertTrue("No product is displayed", product_size > 0);*/
 
 	}
 
 	@Then("^click on any of PPT$")
 	public void click_on_any_of_PPT() throws Throwable {
 
-		try {
+		/*try {
 			WebElement select_ppt = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(
 					"/html[1]/body[1]/div[1]/div[3]/div[1]/div[1]/section[2]/div[1]/div[2]/div[1]/div[1]/div[1]/a[1]/div[1]/img[1]")));
 			js.executeScript("arguments[0].scrollIntoView();", select_ppt);
 			select_ppt.click();
 		} catch (NoSuchElementException e) {
 
-		}
+		}*/
 	}
 
 	@Then("^verify the page$")
 	public void verify_the_page() throws Throwable {
 		// verify the download button
-		try {
+		/*try {
 			Thread.sleep(4000);
 			verify_ppt_page = BaseClass.elementToBeClickable(By.xpath("//a[@id='download_product']")).getText();
 			Assert.assertTrue("user is not on corect page", verify_ppt_page.contains("Download this Presentation"));
 		} catch (NoSuchElementException e) {
 
-		}
+		}*/
 
 	}
 
 	@Given("^Click on Login button$")
 	public void click_on_Login_button() throws Throwable {
-		Thread.sleep(3000);
+		/*Thread.sleep(3000);
 		WebElement login = wait.until(ExpectedConditions.elementToBeClickable(By.linkText("LOGIN")));
-		login.click();
+		login.click();*/
 	}
 
 	@Then("^Enter valid username \"([^\"]*)\" and \"([^\"]*)\" password$")
 	public void enter_valid_username_and_password(String username, String password) throws Throwable {
-		Thread.sleep(3000);
+		/*Thread.sleep(3000);
 		try {
 			WebElement email = wait
 					.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@placeholder='E-mail Address']")));
@@ -130,28 +130,28 @@ public class New_Additions extends BaseClass {
 			Thread.sleep(2000);
 		} catch (NoSuchElementException e) {
 
-		}
+		}*/
 	}
 
 	@Then("^Click on New Addition button on Top navigation bar$")
 	public void Click_on_New_Addition_button_on_Top_navigation_bar() throws Throwable {
-		newAdditions = wait.until(ExpectedConditions.elementToBeClickable(By.linkText("NEW ADDITIONS")));
-		newAdditions.click();
+		/*newAdditions = wait.until(ExpectedConditions.elementToBeClickable(By.linkText("NEW ADDITIONS")));
+		newAdditions.click();*/
 	}
 
 	@Then("^Mouse hover on any of one ppt and verify the the popup$")
 	public void mouse_hover_on_any_of_one_ppt_and_verify_the_the_popup() throws Throwable {
-		try {
-			Thread.sleep(3000);
+		/*try {
+			Thread.sleep(8000);
 			select_ppt = wait.until(ExpectedConditions.elementToBeClickable(
-					By.xpath("//img[@title='Scrum Master Job Profile IT Who Can Become A Scrum Master Clipart PDF']")));
+					By.xpath("//img[@title='Project Scope Management With Process And Itto Summary Project Scope Management Deliverables Designs PDF']")));
 			Actions action = new Actions(driver);
 			js.executeScript("arguments[0].scrollIntoView();", select_ppt);
 			action.moveToElement(select_ppt).perform();
 			Thread.sleep(3000);
 
 			// to verify the pop-up
-			String display = driver.findElement(By.xpath("//div[@id = 'imgtip318052']")).getCssValue("display");
+			String display = driver.findElement(By.xpath("//div[@id = 'imgtip334252']")).getCssValue("display");
 
 			System.out.println("display= " + display);
 
@@ -159,13 +159,13 @@ public class New_Additions extends BaseClass {
 																					// visible
 		} catch (NoSuchElementException e) {
 
-		}
+		}*/
 
 	}
 
 	@Then("^Click on pagination number and verify the listing below$")
 	public void Click_on_pagination_number_and_verify_the_listing_below() throws Throwable {
-		Thread.sleep(3000);
+		/*Thread.sleep(3000);
 		// click on 5th page number
 		page_number = wait
 				.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='product-info']//ul//li[6]")));
@@ -177,12 +177,12 @@ public class New_Additions extends BaseClass {
 		System.out.println("Total product on " + pageNumber + "th page = " + productSize.size());
 
 		product_size = productSize.size();
-		Assert.assertTrue("No product is displayed", product_size > 0);
+		Assert.assertTrue("No product is displayed", product_size > 0);*/
 	}
 
 	@Then("^Click on any of PPT and verify the download button$")
 	public void click_on_any_of_PPT_and_verify_the_download_button() throws Throwable {
-		try {
+		/*try {
 			WebElement select_ppt = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(
 					"/html[1]/body[1]/div[1]/div[3]/div[1]/div[1]/section[2]/div[1]/div[2]/div[1]/div[1]/div[1]/a[1]/div[1]/img[1]")));
 			js.executeScript("arguments[0].scrollIntoView();", select_ppt);
@@ -201,18 +201,18 @@ public class New_Additions extends BaseClass {
 			Assert.assertTrue("user is not on corect page", verify_ppt_page.contains("Download this Presentation"));
 		} catch (NoSuchElementException e) {
 
-		}
+		}*/
 	}
 
 	@Then("^Clicks on the Logout button$")
 	public void clicks_on_the_Logout_button() throws Throwable {
-		try {
+		/*try {
 			Thread.sleep(4000);
 			WebElement logout = wait
 					.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[normalize-space()='Logout']")));
 			js.executeScript("arguments[0].click();", logout);
 		} catch (NoSuchElementException e) {
 
-		}
+		}*/
 	}
 }

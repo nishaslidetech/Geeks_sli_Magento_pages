@@ -171,7 +171,7 @@ public class Sli_popup_test_with_outerClick extends BaseClass {
 		}
 	}
 
-	@Then("^Press the Escape keyPress the outerside the popup$")
+	@Then("^Press the outerside the popup$")
 	public void Press_the_outerside_the_popup() throws Throwable {
 		try {
 			Thread.sleep(3000);
@@ -208,8 +208,8 @@ public class Sli_popup_test_with_outerClick extends BaseClass {
 		}
 	}
 
-	@Then("^Open Sli listing pages and verify the pop-up$")
-	public void Open_Sli_listing_pages_and_verify_the_pop_up() throws Throwable {
+	@Then("^Open Sli listing pages and verify the pop-upi$")
+	public void Open_Sli_listing_pages_and_verify_the_pop_upi() throws Throwable {
 		try {
 			search_field = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@id='search-input']")));
 			search_field.clear();

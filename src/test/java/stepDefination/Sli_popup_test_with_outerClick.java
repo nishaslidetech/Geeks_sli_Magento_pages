@@ -129,9 +129,9 @@ public class Sli_popup_test_with_outerClick extends BaseClass {
 			search_field = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@id='search-input']")));
 			search_field.clear();
 			Thread.sleep(2000);
-			WebElement sign_In = wait
-					.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[normalize-space()='Sign In']")));
-			js.executeScript("arguments[0].click();", sign_In);
+				WebElement login = wait.until(ExpectedConditions.elementToBeClickable(By.linkText("LOGIN")));
+			Thread.sleep(3000);
+			js.executeScript("arguments[0].click();", login);
 			Thread.sleep(2000);
 		} catch (NoSuchElementException e) {
 
@@ -141,14 +141,19 @@ public class Sli_popup_test_with_outerClick extends BaseClass {
 	@Then("^Enter free valid username \"([^\"]*)\" and password \"([^\"]*)\"$")
 	public void enter_free_valid_username_and_password(String username, String Password) throws Throwable {
 		try {
-			WebElement email = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@id='email']")));
+			WebElement email = wait
+					.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@placeholder='E-mail Address']")));
 			email.sendKeys(username);
-			WebElement password = wait.until(ExpectedConditions
-					.elementToBeClickable(By.xpath("//fieldset[@class='fieldset login']//input[@id='pass']")));
-			password.sendKeys(Password);
+
+			WebElement password_field = wait
+					.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@placeholder='Password']")));
+			password_field.sendKeys(Password);
+			Thread.sleep(2000);
+
 			WebElement login_btn = wait
-					.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[normalize-space()='Login']")));
+					.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@name='Submit']")));
 			login_btn.click();
+			Thread.sleep(2000);
 		} catch (NoSuchElementException e) {
 
 		}

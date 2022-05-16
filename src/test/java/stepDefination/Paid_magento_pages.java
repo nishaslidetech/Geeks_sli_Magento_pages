@@ -14,13 +14,13 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 
 public class Paid_magento_pages extends BaseClass {
-	private WebElement select_ppt;
-	private String verify_ppt_page;
-	private int product_size;
-	private WebElement page_number;
+	public WebElement select_ppt;
+	public String verify_ppt_page;
+	public int product_size;
+	public WebElement page_number;
 	WebElement business_ppt;
-	private String pageNumber;
-	private WebElement mostPopular;
+	public String pageNumber;
+	public WebElement mostPopular;
 
 	@Given("^User is on Home Pageii$")
 	public void user_is_on_Home_Pageii() throws Throwable {

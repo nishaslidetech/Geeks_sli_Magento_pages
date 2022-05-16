@@ -2,30 +2,29 @@ package SetUpClass;
 
 import java.io.FileReader;
 import java.time.Duration;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.Map;
 import java.util.NoSuchElementException;
 import java.util.Properties;
-
 import java.util.concurrent.TimeUnit;
 
 import org.apache.log4j.Logger;
+import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Cookie;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.logging.LogEntries;
+import org.openqa.selenium.logging.LogEntry;
+import org.openqa.selenium.logging.LogType;
+import org.openqa.selenium.logging.Logs;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -58,10 +57,6 @@ public class BaseClass {
 			WebDriverManager.chromedriver().setup();
 			ChromeOptions options = new ChromeOptions();
 			options.addArguments("--disable-notifications");
-
-			options.addArguments("--incognito"); // DesiredCapabilities object
-			DesiredCapabilities c = DesiredCapabilities.chrome(); // set capability to
-			c.setCapability(ChromeOptions.CAPABILITY, options);
 
 			driver = new ChromeDriver(options);
 
@@ -107,7 +102,7 @@ public class BaseClass {
 				.withTimeout(Duration.ofSeconds(30)).ignoring(NoSuchElementException.class);
 		return wait.until(ExpectedConditions.elementToBeClickable(locator));
 	}
-	
+
 	public static WebElement precenceOfElement(By locator) {
 		FluentWait<WebDriver> wait = new FluentWait<WebDriver>(driver)
 				// Check for condition in every 2 seconds
@@ -117,13 +112,14 @@ public class BaseClass {
 		return wait.until(ExpectedConditions.presenceOfElementLocated(locator));
 	}
 
+	
 
 	@AfterClass
 	public static void after_Class() throws InterruptedException {
 		Thread.sleep(2000);
 
 		if (driver != null) {
-			//driver.quit(); // ->> don't want to close the browser
+			// driver.quit(); // ->> don't want to close the browser
 			Thread.sleep(2000);
 		}
 

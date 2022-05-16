@@ -14,12 +14,12 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 
 public class New_Additions extends BaseClass {
-	private WebElement newAdditions;
-	private String pageNumber;
-	private int product_size;
-	private WebElement page_number;
-	private WebElement select_ppt;
-	private String verify_ppt_page;
+	public WebElement newAdditions;
+	public String pageNumber;
+	public int product_size;
+	public WebElement page_number;
+	public WebElement select_ppt;
+	public String verify_ppt_page;
 
 	@Given("^user is on Home Pagesi$")
 	public void user_is_on_Home_Pagesi() throws Throwable {

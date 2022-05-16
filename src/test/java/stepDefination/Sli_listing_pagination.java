@@ -3,6 +3,7 @@ package stepDefination;
 import java.util.List;
 
 import org.junit.Assert;
+import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
@@ -15,12 +16,12 @@ import cucumber.api.java.en.Then;
 
 public class Sli_listing_pagination extends BaseClass {
 
-	private WebElement searchField;
-	private int product_size;
-	private String pageNumber;
-	private WebElement select_ppt;
-	private String verify_ppt_page;
-	private WebElement page_number;
+	public WebElement searchField;
+	public int product_size;
+	public String pageNumber;
+	public WebElement select_ppt;
+	public String verify_ppt_page;
+	public WebElement page_number;
 
 	@Given("^User is on Home Page$")
 	public void user_is_on_Home_Page() throws Throwable {
@@ -30,6 +31,7 @@ public class Sli_listing_pagination extends BaseClass {
 
 	}
 
+	@Test
 	@Then("^Enter keyword \"([^\"]*)\" in search field$")
 	public void enter_keyword_in_search_field(String text) throws Throwable {
 		try {
@@ -41,11 +43,12 @@ public class Sli_listing_pagination extends BaseClass {
 		}
 	}
 
+	@Test
 	@Then("^Go to the listing page$")
 	public void go_to_the_listing_page() throws Throwable {
 		try {
 			WebElement softwareTesting = wait.until(
-					ExpectedConditions.elementToBeClickable(By.xpath("//div[@Class='sli_ac_suggestions']//ul//li[5]")));
+					ExpectedConditions.elementToBeClickable(By.xpath("//div[@Class='sli_ac_suggestions']//ul//li[6]")));
 			Thread.sleep(3000);
 			softwareTesting.click();
 			System.out.println();
@@ -54,6 +57,7 @@ public class Sli_listing_pagination extends BaseClass {
 		}
 	}
 
+	@Test
 	@Then("^mouse hover on any of one ppts$")
 	public void mouse_hover_on_any_of_one_ppts() throws Throwable {
 		try {
@@ -68,6 +72,7 @@ public class Sli_listing_pagination extends BaseClass {
 		}
 	}
 
+	@Test
 	@Then("^verify the whether the pop-up is visible$")
 	public void verify_the_whether_the_pop_up_is_visible() throws Throwable {
 		// to verify the pop-up
@@ -81,6 +86,7 @@ public class Sli_listing_pagination extends BaseClass {
 																				// visible
 	}
 
+	@Test
 	@Then("^click on any of page number and verify the product below$")
 	public void click_on_any_of_page_number_and_verify_the_product_below() throws Throwable {
 		Thread.sleep(3000);
@@ -98,6 +104,7 @@ public class Sli_listing_pagination extends BaseClass {
 		Assert.assertTrue("No product is displayed", product_size > 0);
 	}
 
+	@Test
 	@Then("^click on any of ppt$")
 	public void click_on_any_of_ppt() throws Throwable {
 		try {
@@ -110,6 +117,7 @@ public class Sli_listing_pagination extends BaseClass {
 		}
 	}
 
+	@Test
 	@Then("^verify the ppt page$")
 	public void verify_the_ppt_page() throws Throwable {
 		// verify the download button
@@ -123,6 +131,7 @@ public class Sli_listing_pagination extends BaseClass {
 		}
 	}
 
+	@Test
 	@Then("^Click on signup page$")
 	public void click_on_signup_page() throws Throwable {
 		Thread.sleep(3000);
@@ -130,6 +139,7 @@ public class Sli_listing_pagination extends BaseClass {
 		sign_in.click();
 	}
 
+	@Test
 	@Then("^Enter username \"([^\"]*)\" and password \"([^\"]*)\"$")
 	public void enter_username_and_password(String username, String password) throws Throwable {
 		Thread.sleep(3000);
@@ -151,6 +161,7 @@ public class Sli_listing_pagination extends BaseClass {
 		}
 	}
 
+	@Test
 	@Then("^Enter keyword \"([^\"]*)\" in search fields$")
 	public void enter_keyword_in_search_fields(String text1) throws Throwable {
 		try {
@@ -162,6 +173,7 @@ public class Sli_listing_pagination extends BaseClass {
 		}
 	}
 
+	@Test
 	@Then("^Go to the listing pagei$")
 	public void go_to_the_listing_pagei() throws Throwable {
 		try {
@@ -174,6 +186,7 @@ public class Sli_listing_pagination extends BaseClass {
 		}
 	}
 
+	@Test
 	@Then("^mouse hover on any of one pptsi$")
 	public void mouse_hover_on_any_of_one_pptsi() throws Throwable {
 		try {
@@ -190,6 +203,7 @@ public class Sli_listing_pagination extends BaseClass {
 		}
 	}
 
+	@Test
 	@Then("^verify the whether the pop-up is visiblei$")
 	public void verify_the_whether_the_pop_up_is_visiblei() throws Throwable {
 
@@ -202,6 +216,7 @@ public class Sli_listing_pagination extends BaseClass {
 																				// visible
 	}
 
+	@Test
 	@Then("^click on Any of page number and verify the listing pagebelowi$")
 	public void click_on_Any_of_page_number_and_verify_the_listing_pagebelowi() throws Throwable {
 		Thread.sleep(3000);
@@ -220,6 +235,7 @@ public class Sli_listing_pagination extends BaseClass {
 		Assert.assertTrue("No product is displayed", product_size > 0);
 	}
 
+	@Test
 	@Then("^click on any of ppti$")
 	public void click_on_any_of_ppti() throws Throwable {
 		try {
@@ -232,6 +248,7 @@ public class Sli_listing_pagination extends BaseClass {
 		}
 	}
 
+	@Test
 	@Then("^verify the navigation on cottect ppt pageii$")
 	public void verify_the_navigation_on_cottect_ppt_pageii() throws Throwable {
 		// verify the download button
@@ -246,6 +263,8 @@ public class Sli_listing_pagination extends BaseClass {
 		}
 	}
 
+	@Test
+	
 	@Then("^click on Sign out button and verify the pagei$")
 	public void click_on_Sign_out_button_and_verify_the_pagei() throws Throwable {
 		try {

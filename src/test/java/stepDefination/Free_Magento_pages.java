@@ -3,6 +3,7 @@ package stepDefination;
 import java.util.List;
 
 import org.junit.Assert;
+import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
@@ -14,10 +15,10 @@ import cucumber.api.java.en.Then;
 
 public class Free_Magento_pages extends BaseClass {
 
-	private String verify_ppt_page;
-	private WebElement page_number;
-	private String pageNumber;
-	private WebElement freeSlides;
+	public String verify_ppt_page;
+	public WebElement page_number;
+	public String pageNumber;
+	public WebElement freeSlides;
 
 	@Given("^user is on Home Page$")
 	public void user_is_on_Home_Page() throws Throwable {
@@ -30,6 +31,7 @@ public class Free_Magento_pages extends BaseClass {
 	public void click_on_Free_Slides_button_on_top_navigation_bar() throws Throwable {
 		freeSlides = wait.until(ExpectedConditions.elementToBeClickable(By.linkText("FREE SLIDES")));
 		freeSlides.click();
+		
 	}
 
 	@Then("^click on any of page number and verify the listing page below$")

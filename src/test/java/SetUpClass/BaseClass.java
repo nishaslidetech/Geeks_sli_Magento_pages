@@ -58,13 +58,11 @@ public class BaseClass {
 			ChromeOptions options = new ChromeOptions();
 			options.addArguments("--disable-notifications");
 
-<<<<<<< HEAD
-=======
+
 			/*options.addArguments("--incognito"); // DesiredCapabilities object
 			DesiredCapabilities c = DesiredCapabilities.chrome(); // set capability to
 			c.setCapability(ChromeOptions.CAPABILITY, options);*/
 
->>>>>>> 2b69c8fb62a27b51d7f147ea8dbf0061fe8619e8
 			driver = new ChromeDriver(options);
 
 			driver.manage().window().maximize();
@@ -133,3 +131,4 @@ public class BaseClass {
 	}
 
 }
+

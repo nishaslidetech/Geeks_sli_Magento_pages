@@ -40,7 +40,7 @@ public class Paid_magento_pages extends BaseClass {
 
 		try {
 			Thread.sleep(3000);
-			select_ppt = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='box-top']//img[@title='Up Skilling Vector With Progress In Content Writing Ppt PowerPoint Presentation Styles Professional PDF']")));
+			select_ppt = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//img[@title='Up Skilling Vector With Progress In Content Writing Ppt PowerPoint Presentation Styles Professional PDF']")));
 			Actions action = new Actions(driver);
 			js.executeScript("arguments[0].scrollIntoView();", select_ppt);
 			action.moveToElement(select_ppt).perform();

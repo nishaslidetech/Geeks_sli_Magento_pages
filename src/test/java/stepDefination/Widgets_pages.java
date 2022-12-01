@@ -39,9 +39,19 @@ public class Widgets_pages extends BaseClass {
 
 		try {
 			Thread.sleep(4000);
-			String verify_ppt_page = wait
-					.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@id='download_product']"))).getText();
-			Assert.assertTrue("user is not on corect page", verify_ppt_page.contains("Download this Presentation"));
+			if (!(driver.findElements(By.xpath("//a[@id='single_download_product']"))).isEmpty()) {
+				Assert.assertTrue("user is not on corect page",
+						driver.findElement(By.xpath("//a[@id='single_download_product']")).getText()
+								.contains("Download this single"));
+
+			}
+			Thread.sleep(4000);
+			if (!(driver.findElements(By.xpath("//a[@id='download_product']"))).isEmpty()) {
+				String verify_ppt_page = wait
+						.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@id='download_product']")))
+						.getText();
+				Assert.assertTrue("user is not on corect page", verify_ppt_page.contains("Download this Presentation"));
+			}
 		} catch (NoSuchElementException e) {
 
 		}

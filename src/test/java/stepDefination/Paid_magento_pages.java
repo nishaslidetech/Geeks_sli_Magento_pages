@@ -40,7 +40,8 @@ public class Paid_magento_pages extends BaseClass {
 
 		try {
 			Thread.sleep(3000);
-			select_ppt = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//img[@title='Up Skilling Vector With Progress In Content Writing Ppt PowerPoint Presentation Styles Professional PDF']")));
+			select_ppt = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(
+					"//img[@title='Up Skilling Vector With Progress In Content Writing Ppt PowerPoint Presentation Styles Professional PDF']")));
 			Actions action = new Actions(driver);
 			js.executeScript("arguments[0].scrollIntoView();", select_ppt);
 			action.moveToElement(select_ppt).perform();
@@ -82,9 +83,11 @@ public class Paid_magento_pages extends BaseClass {
 	@Then("^click on any of one Ppt$")
 	public void click_on_any_of_one_Ppt() throws Throwable {
 		try {
-			WebElement select_ppt = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html[1]/body[1]/div[1]/div[3]/div[1]/div[1]/section[2]/div[1]/div[2]/div[1]/div[1]/div[1]/a[1]/div[1]/img[1]")));
+			WebElement select_ppt = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(
+					"/html[1]/body[1]/div[1]/div[3]/div[1]/div[1]/section[2]/div[1]/div[2]/div[1]/div[1]/div[1]/a[1]/div[1]/img[1]")));
 			js.executeScript("arguments[0].scrollIntoView();", select_ppt);
 			select_ppt.click();
+			Thread.sleep(4000);
 		} catch (NoSuchElementException e) {
 
 		}
@@ -93,11 +96,34 @@ public class Paid_magento_pages extends BaseClass {
 	@Then("^verify the user will navigation on cottect ppt page$")
 	public void verify_the_user_will_navigation_on_cottect_ppt_page() throws Throwable {
 		// verify the download button
+		/*
+		 * try { Thread.sleep(2000); verify_ppt_page = wait
+		 * .until(ExpectedConditions.elementToBeClickable(By.xpath(
+		 * "//a[@id='download_product']"))).getText();
+		 * Assert.assertTrue("user is not on corect page",
+		 * verify_ppt_page.contains("Download this Presentation")); } catch
+		 * (NoSuchElementException e) {
+		 * 
+		 * }
+		 */
+
 		try {
-			Thread.sleep(2000);
-			verify_ppt_page = wait
-					.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@id='download_product']"))).getText();
-			Assert.assertTrue("user is not on corect page", verify_ppt_page.contains("Download this Presentation"));
+
+			if (!(driver.findElements(By.xpath("//a[@id='single_download_product']"))).isEmpty()) {
+				String Text = driver.findElement(By.xpath("//a[@id='single_download_product']")).getText();
+				System.out.println("text=  " + Text);
+				Assert.assertTrue("user is not on corect page",
+						driver.findElement(By.xpath("//a[@id='single_download_product']")).getText()
+								.contains("Download this single"));
+
+			}
+
+			else if (!(driver.findElements(By.xpath("//a[@id='download_product']"))).isEmpty()) {
+				String verify_ppt_page = wait
+						.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@id='download_product']")))
+						.getText();
+				Assert.assertTrue("user is not on corect page", verify_ppt_page.contains("Download this Presentation"));
+			}
 		} catch (NoSuchElementException e) {
 
 		}
@@ -143,7 +169,8 @@ public class Paid_magento_pages extends BaseClass {
 	public void mouse_hover_on_any_of_one_ppti() throws Throwable {
 		try {
 			Thread.sleep(3000);
-			select_ppt = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//img[@title='Emerging Marketplace Strategies Growth Ppt PowerPoint Presentation Complete Deck']")));
+			select_ppt = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(
+					"//img[@title='Emerging Marketplace Strategies Growth Ppt PowerPoint Presentation Complete Deck']")));
 			Actions action = new Actions(driver);
 			js.executeScript("arguments[0].scrollIntoView();", select_ppt);
 			action.moveToElement(select_ppt).perform();
@@ -189,6 +216,7 @@ public class Paid_magento_pages extends BaseClass {
 					"/html[1]/body[1]/div[1]/div[3]/div[1]/div[1]/section[2]/div[1]/div[2]/div[1]/div[5]/div[1]/a[1]/div[1]/img[1]")));
 			js.executeScript("arguments[0].scrollIntoView();", select_ppt);
 			select_ppt.click();
+			Thread.sleep(4000);
 		} catch (NoSuchElementException e) {
 
 		}
@@ -197,11 +225,34 @@ public class Paid_magento_pages extends BaseClass {
 	@Then("^Verify the navigation on cottect ppt page$")
 	public void verify_the_navigation_on_cottect_ppt_page() throws Throwable {
 		// verify the download button
+		/*
+		 * try { Thread.sleep(4000); verify_ppt_page = wait
+		 * .until(ExpectedConditions.elementToBeClickable( By.
+		 * xpath("//a[@class='btn-download pg-button pg-addtocart pg-green-background-btn']"
+		 * ))) .getText(); Assert.assertTrue("user is not on corect page",
+		 * verify_ppt_page.contains("Download this Presentation")); } catch
+		 * (NoSuchElementException e) {
+		 * 
+		 * }
+		 */
+
 		try {
-			Thread.sleep(4000);
-			verify_ppt_page = wait
-					.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@class='btn-download pg-button pg-addtocart pg-green-background-btn']"))).getText();
-			Assert.assertTrue("user is not on corect page", verify_ppt_page.contains("Download this Presentation"));
+
+			if (!(driver.findElements(By.xpath("//a[@id='single_download_product']"))).isEmpty()) {
+				String Text = driver.findElement(By.xpath("//a[@id='single_download_product']")).getText();
+				System.out.println("text=  " + Text);
+				Assert.assertTrue("user is not on corect page",
+						driver.findElement(By.xpath("//a[@id='single_download_product']")).getText()
+								.contains("Download this single"));
+
+			}
+
+			else if (!(driver.findElements(By.xpath("//a[@id='download_product']"))).isEmpty()) {
+				String verify_ppt_page = wait
+						.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@id='download_product']")))
+						.getText();
+				Assert.assertTrue("user is not on corect page", verify_ppt_page.contains("Download this Presentation"));
+			}
 		} catch (NoSuchElementException e) {
 
 		}

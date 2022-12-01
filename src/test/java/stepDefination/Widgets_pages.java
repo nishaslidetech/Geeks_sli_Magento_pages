@@ -28,6 +28,7 @@ public class Widgets_pages extends BaseClass {
 					"//div[@class='heading-wrapper reports-wrapper']//div[2]//div[1]/div[1]//div[1]//a[1]//div[1]//img[1]")));
 			js.executeScript("arguments[0].scrollIntoView();", select_ppt);
 			select_ppt.click();
+			Thread.sleep(4000);
 		} catch (NoSuchElementException e) {
 
 		}
@@ -38,15 +39,17 @@ public class Widgets_pages extends BaseClass {
 		// verify the download button
 
 		try {
-			Thread.sleep(4000);
+			
 			if (!(driver.findElements(By.xpath("//a[@id='single_download_product']"))).isEmpty()) {
+				String Text  = driver.findElement(By.xpath("//a[@id='single_download_product']")).getText();
+				System.out.println("text=  " + Text);
 				Assert.assertTrue("user is not on corect page",
 						driver.findElement(By.xpath("//a[@id='single_download_product']")).getText()
 								.contains("Download this single"));
 
 			}
-			Thread.sleep(4000);
-			if (!(driver.findElements(By.xpath("//a[@id='download_product']"))).isEmpty()) {
+			
+			else if (!(driver.findElements(By.xpath("//a[@id='download_product']"))).isEmpty()) {
 				String verify_ppt_page = wait
 						.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@id='download_product']")))
 						.getText();

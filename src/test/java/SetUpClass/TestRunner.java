@@ -9,7 +9,7 @@ import io.cucumber.junit.CucumberOptions;
 
 //@RunWith(Cucumber.class)
 @RunWith(Cucumber.class)
-@CucumberOptions(features = { "." }, glue = { "stepDefination" },  //tags= ("@Emarsys_Widgets_pages"),
+@CucumberOptions(features = { "." }, glue = { "stepDefination" }, // tags = ("@Sli_pagination_test"),
 		plugin = { "pretty", "html:target/site/cucumber-pretty", "json:target/cucumber/cucumber.json",
 				"usage:target/usage.jsonx", "junit:target/cucumber.xml" })
 
@@ -24,5 +24,5 @@ public class TestRunner {
 	public static void afterClass() throws Exception {
 		BaseClass.after_Class();
 	}
-	
+
 }

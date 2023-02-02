@@ -75,11 +75,12 @@ public class Sli_popup_test_with_outerClick extends BaseClass {
 		try {
 			search_field = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@id='search-input']")));
 			search_field.clear();
+			Thread.sleep(3000);
 			search_field.sendKeys("HR");
 			Thread.sleep(4000);
 
 			// click on "hr report" in left navigation bar
-
+			Thread.sleep(3000);
 			WebElement hr_Report = wait
 					.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@Class='sli_ac_suggestions']//ul//li[5]")));
 			hr_Report.click();
